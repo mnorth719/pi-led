@@ -6,6 +6,7 @@ var http = require('http'),
     });
 
 var port = 3000;
+var led;
 
 board.on('ready', function() {
     console.log('board is ready!');
@@ -13,7 +14,11 @@ board.on('ready', function() {
     http.createServer(function(req, res) {
         req.on('data', function(chunk) {
             var data = JSON.parse(chunk.toString());
-            var led = new five.Led(data.pin);
+
+            if (!led) { 
+                console.log('pin initiated with ' + data.pin);
+                led = new five.Led(data.pin);
+            }
 
             console.log('executing command: "%s"', data.command);
 
