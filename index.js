@@ -46,7 +46,7 @@ board.on('ready', function() {
 
             res.end();
         });
-    }).listen(3000);
+    }).listen(port);
     console.log('listening on port ' + port);
 });
 
