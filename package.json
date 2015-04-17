@@ -1,0 +1,24 @@
+{
+  "name": "led",
+  "version": "1.0.0",
+  "description": "LED sample app with Johnny-Five",
+  "main": "index.js",
+  "dependencies": {
+    "johnny-five": "^0.8.58",
+    "raspi-io": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kkaung/led"
+  },
+  "author": "Kevin Aung <kevin.aung@yahoo.com> (https://github.com/kkaung)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kkaung/led/issues"
+  },
+  "homepage": "https://github.com/kkaung/led"
+}
