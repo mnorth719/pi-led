@@ -38,6 +38,8 @@ board.on('ready', function() {
                     console.log('Invalid command. Available commands: "on", "off", "strobe", "stop"');
                     break;
             }
+
+            res.end();
         });
     }).listen(3000);
     console.log('listening on port ' + port);
