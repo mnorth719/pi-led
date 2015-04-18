@@ -43,7 +43,7 @@ board.on('ready', function() {
                     if (data.ms) {
                         led.fadeIn(data.ms); 
                     }else{
-                         response.writeHead(400, {
+                         res.writeHead(400, {
                             'Content-Length': body.length,
                             'Content-Type': 'text/plain' 
                         }); 
@@ -55,7 +55,7 @@ board.on('ready', function() {
                     if (data.ms) {
                         led.fadeOut(data.ms); 
                     }else{
-                        response.writeHead(400, {
+                        res.writeHead(400, {
                             'Content-Length': body.length,
                             'Content-Type': 'text/plain' 
                         }); 
