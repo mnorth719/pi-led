@@ -43,7 +43,7 @@ board.on('ready', function() {
                     if (data.ms) {
                         led.fadeIn(data.ms); 
                     }else{
-                        return res.status(400).json({ message: 'Bad Request' });
+                        return res.writeHead(400, "Bad Request"); 
                     }
                 }
                     break;
@@ -52,7 +52,8 @@ board.on('ready', function() {
                     if (data.ms) {
                         led.fadeOut(data.ms); 
                     }else{
-                        return res.status(400).json({ message: 'Bad Request' });
+                        return res.writeHead(400, "Bad Request"); 
+
                     }
                 }
                     break; 
