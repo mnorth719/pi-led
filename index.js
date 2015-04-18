@@ -40,8 +40,8 @@ board.on('ready', function() {
                     break;
 
                 case 'fadeIn': {
-                    if (command.ms) {
-                        led.fadeIn(command.ms); 
+                    if (data.ms) {
+                        led.fadeIn(data.ms); 
                     }else{
                         return res.status(400).json({ message: 'Bad Request' });
                     }
@@ -49,8 +49,8 @@ board.on('ready', function() {
                     break;
 
                 case 'fadeOut': {
-                    if (command.ms) {
-                        led.fadeOut(command.ms); 
+                    if (data.ms) {
+                        led.fadeOut(data.ms); 
                     }else{
                         return res.status(400).json({ message: 'Bad Request' });
                     }
