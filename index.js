@@ -39,6 +39,23 @@ board.on('ready', function() {
                     led.stop();
                     break;
 
+                case 'fadeIn': {
+                    if (command.ms) {
+                        led.fadeIn(command.ms); 
+                    }else{
+                        return res.status(400).json({ message: 'Bad Request' });
+                    }
+                }
+                    break;
+
+                case 'fadeOut': {
+                    if (command.ms) {
+                        led.fadeOut(command.ms); 
+                    }else{
+                        return res.status(400).json({ message: 'Bad Request' });
+                    }
+                }
+                    break; 
                 default:
                     console.log('Invalid command. Available commands: "on", "off", "strobe", "stop"');
                     break;
