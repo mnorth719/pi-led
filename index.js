@@ -43,7 +43,10 @@ board.on('ready', function() {
                     if (data.ms) {
                         led.fadeIn(data.ms); 
                     }else{
-                        return res.end(400, "Bad Request"); 
+                         response.writeHead(400, {
+                            'Content-Length': body.length,
+                            'Content-Type': 'text/plain' 
+                        }); 
                     }
                 }
                     break;
@@ -52,8 +55,10 @@ board.on('ready', function() {
                     if (data.ms) {
                         led.fadeOut(data.ms); 
                     }else{
-                        return res.end(400, "Bad Request"); 
-
+                        response.writeHead(400, {
+                            'Content-Length': body.length,
+                            'Content-Type': 'text/plain' 
+                        }); 
                     }
                 }
                     break; 
